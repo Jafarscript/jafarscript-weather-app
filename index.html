@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/78489cf207.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <i class="fas fa-cloud-sun"></i>
-        <span> Weather App</span>
-      </div>
-      <label class="med">
-        <input type="search" class="src" />
-        <button class="btn">Search</button>
-      </label>
-    </header>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://kit.fontawesome.com/78489cf207.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-cloud-sun"></i>
+      <span> Weather App</span>
+    </div>
+    <label class="med">
+      <input type="search" class="src" />
+      <button class="btn">Search</button>
+    </label>
+  </header>
+  <section class="desc">
+    <h2 class="name">London</h2>
+    <h4 class="cond">Clouds</h4>
+    <h1 class="temp">72°</h1>
+    <div>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn"><span class="celc">°C</span>/<span class="fahn">°F</span></label>
+    </div>
+    <p class="dep">Today:</p>
+  </section>
+</body>
+
 </html>
