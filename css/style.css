@@ -54,3 +54,37 @@ header {
   margin-right: 10px;
   font-size: 15px;
 }
+
+#check{
+  display: none;
+}
+
+.checkbtn{
+  background-color: #07dbf7;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.desc h2{
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.desc h4{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 25px;
+}
+.desc h1{
+  font-size: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.desc{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
