@@ -54,7 +54,58 @@ header {
   margin-right: 10px;
   font-size: 15px;
 }
+.other{
+  background-color: #343a40;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  padding: 30px 100px;
+  place-items: center center;
+  text-align: center;
+}
 
+.other div{
+  margin-bottom: 30px;
+}
+
+.other div h4{
+  color: rgb(141, 141, 137);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 13px;
+}
+.other div h2{
+  color: #07dbf7;
+}
+@media (max-width: 950px){
+  header{
+      flex-direction: column;
+      padding: 20px 10px;
+      align-items: center;
+      justify-content: center;
+  }
+  header label{
+      margin-top: 20px;
+  }
+
+  .other{
+      padding: 20px 10px;
+      grid-template-columns: 1fr 1fr;
+  }
+  .med{
+      width: 200px;
+  }
+  .med button{
+      padding: 5px;
+      font-size: 12px;
+  }
+  .med input{
+      font-size: 12px;
+  }
+  .checkbtn{
+      padding: 5px 15px;
+  }
+}
 #check{
   display: none;
 }
