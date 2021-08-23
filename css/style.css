@@ -54,7 +54,29 @@ header {
   margin-right: 10px;
   font-size: 15px;
 }
+.other{
+  background-color: #343a40;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  padding: 30px 100px;
+  place-items: center center;
+  text-align: center;
+}
 
+.other div{
+  margin-bottom: 30px;
+}
+
+.other div h4{
+  color: rgb(141, 141, 137);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 13px;
+}
+.other div h2{
+  color: #07dbf7;
+}
 @media (max-width: 950px){
   header{
       flex-direction: column;
@@ -83,4 +105,37 @@ header {
   .checkbtn{
       padding: 5px 15px;
   }
+}
+#check{
+  display: none;
+}
+
+.checkbtn{
+  background-color: #07dbf7;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.desc h2{
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.desc h4{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 25px;
+}
+.desc h1{
+  font-size: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.desc{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
 }
