@@ -54,3 +54,33 @@ header {
   margin-right: 10px;
   font-size: 15px;
 }
+
+@media (max-width: 950px){
+  header{
+      flex-direction: column;
+      padding: 20px 10px;
+      align-items: center;
+      justify-content: center;
+  }
+  header label{
+      margin-top: 20px;
+  }
+
+  .other{
+      padding: 20px 10px;
+      grid-template-columns: 1fr 1fr;
+  }
+  .med{
+      width: 200px;
+  }
+  .med button{
+      padding: 5px;
+      font-size: 12px;
+  }
+  .med input{
+      font-size: 12px;
+  }
+  .checkbtn{
+      padding: 5px 15px;
+  }
+}
