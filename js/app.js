@@ -1,13 +1,19 @@
 let apiKey = '2341a2abddc990b61f22c2b315450889';
-let city = 'London';
-// let btn = document.querySelector('.btn');
-// btn.addEventListener('click', function () {
-//     city = document.querySelector('.src').value;
-// })
+let search = document.querySelector('#search-area');
+let input = document.querySelector('#search-value');
+let button = document.querySelector('#search-btn');
+let result = document.querySelector('#display');
+
+let city = '';
+
+const url = city => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+
 const getWeather = async () => {
-    const getlocation = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
+    const getlocation = await fetch(url(city));
     const location = await getlocation.json();
     console.log(location);
+
+
     document.querySelector('.name').innerHTML = location.name;
     document.querySelector('.value1').innerHTML = location.wind.speed + ' mph';
     document.querySelector('.value2').innerHTML = location.main.humidity + ' %';
@@ -40,6 +46,35 @@ const getWeather = async () => {
         document.querySelector('.value7').innerHTML = location.main.pressure + ' hPa';
     }
 
+    const {
+        lat,
+        lon
+    } = location.coord
+    console.log(lat, lon)
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2FqYWZhIiwiYSI6ImNrc3A1YXBkYjAwMzAyd29kZ25meTNjZW8ifQ.NrRcbkSqcbSlqISxydtGDQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [lon, lat], // starting position
+        zoom: 11, // starting zoom
+    });
+    map.addControl(new mapboxgl.GeolocateControl({
+        trackUserLocation: true,
+        showUserHeading: true
+    }));
+    const nav = new mapboxgl.NavigationControl();
+    map.addControl(nav, 'bottom-left');
 }
 
-getWeather();
+// To do
+// 1. Add location marker
+// 2. Facebook share button
+// 3. Weather condition icon
+
+button.addEventListener('click', (e) => {
+    e.preventDefault();
+    city = input.value;
+    if (city) {
+        return getWeather();
+    }
+})
