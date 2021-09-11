@@ -105,6 +105,9 @@ header {
   .checkbtn{
       padding: 5px 15px;
   }
+  footer{
+    flex-direction: column;
+  }
 }
 #check{
   display: none;
@@ -142,6 +145,21 @@ header {
 
 .fb-share-button{
   position: fixed;
-  bottom: 10%;
+  bottom: 20%;
   left: 10px;
+}
+
+footer{
+  background-color: #343a40;
+  padding: 30px 50px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+footer a{
+  color: #ffffff;
+  text-decoration: none;
 }
