@@ -139,3 +139,9 @@ header {
   text-align: center;
   padding: 20px;
 }
+
+.fb-share-button{
+  position: fixed;
+  bottom: 10%;
+  left: 10px;
+}
