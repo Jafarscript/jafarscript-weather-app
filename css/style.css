@@ -142,13 +142,6 @@ header {
   text-align: center;
   padding: 20px;
 }
-
-.fb-share-button{
-  position: fixed;
-  bottom: 20%;
-  left: 10px;
-}
-
 footer{
   background-color: #343a40;
   padding: 30px 50px;
